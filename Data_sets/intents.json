@@ -1,0 +1,937 @@
+{
+  "intents": [
+    {
+      "tag": "greeting_arabic",
+      "patterns": [
+        "اهلا",
+        "مرحبا",
+        "ازيك",
+        "صباح الخير",
+        "السلام عليكم"
+      ],
+      "responses": [
+        "اهلا",
+        "ًصباح الخير, أقدر اساعدك ازاي؟"
+      ]
+    },
+    {
+      "tag": "greeting_english",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "Hello",
+        "good afternoon",
+        "good morning"
+      ],
+      "responses": [
+        "Hello!",
+        "Hi, How can I help?",
+        "Hello! How can I assist you with food today?",
+        "Hi there! what food do you want ?",
+        "which food do you want ?"
+      ]
+    },
+    {
+      "tag": "location_arabic",
+      "patterns": [
+        "فين الأكل",
+        "عايز مطعم",
+        "مكان المطاعم",
+        "فين المطعم",
+        "مكان المطعم",
+        "عايز أكل",
+        "أبحث عن مطعم",
+        "مطاعم الجامعة فين",
+        "فين مكان المطاعم",
+        "فين مكان المطاعم في الجامعة"
+      ],
+      "responses": [
+        "جامعتنا فيها مطاعم كتير. ممكن تحدد موقعك الحالي عشان اساعدك؟",
+        "ايه أقرب مدرج او كلية ليك؟"
+      ]
+    },
+    {
+      "tag": "location_english",
+      "patterns": [
+        "Where do I go to eat?",
+        "I'm hungry",
+        "Where are the university restaurants",
+        "I want to eat",
+        "find me somewhere to eat",
+        "where can i find delicious food?",
+        "where is the restuarant here?",
+        "where can i find food?"
+      ],
+      "responses": [
+        "There are many places to eat across the campus. What's your current location so I can suggest somwhere nearby?"
+      ]
+    },
+    {
+      "tag": "restaurant_suggestion_arabic",
+      "patterns": [
+        "اقترح عليا اكل",
+        "اكل ايه؟"
+      ],
+      "responses": [
+        "نفسك تاكل ايه دلوقتي؟ نجرسكو او سوري او بيتزا او سناكس؟"
+      ]
+    },
+    {
+      "tag": "restaurant_suggestion_english",
+      "patterns": [
+        "Suggest somewhere to eat",
+        "Where do you think I should eat?",
+        "Suggest any place",
+        "What's for lunch?",
+        "Tell me about your menu",
+        "Recommend a dish"
+      ],
+      "responses": [
+        "What kind of food would you like to order so I could recommend the best place for it? Would you like dishes like white sauce pasta? or pizza and sandwiches? or Would u like to buy snacks?"
+      ]
+    },
+    {
+      "tag": "pasta_recommendation_arabic",
+      "patterns": [
+        "نفسي في نجرسكو",
+        "مكرونة بشاميل"
+      ],
+      "responses": [
+        "جرب ويتش, بيعمل احسن مكرونة"
+      ]
+    },
+    {
+      "tag": "pasta_recommendation_english",
+      "patterns": [
+        "i would like to order pasta",
+        "i would like to order negresco",
+        "i would like to order white sauce pasta"
+      ],
+      "responses": [
+        "You should try Witch, it has the best reviews for pasta"
+      ]
+    },
+    {
+      "tag": "sandwiches_recommendation_arabic",
+      "patterns": [
+        "نفسي في سندوتش بانيه",
+        "ساندوتش كرسبي",
+        "برجر"
+      ],
+      "responses": [
+        "المروة عنده سندوتشات لذيذة. هتلاقيه جنب مدرج 17"
+      ]
+    },
+    {
+      "tag": "sandwiches_recommendation_english",
+      "patterns": [
+        "i'm craving a chicken sandwich",
+        "i would like a beef burger",
+        "i would like a chicken burger",
+        "i want a crispy chicken sandwich"
+      ],
+      "responses": [
+        "Then I'd suggest El Marwa, it has the best reviews for sandwiches"
+      ]
+    },
+    {
+      "tag": "snacks_recommendation_arabic",
+      "patterns": [
+        "سناكس و شيبسي",
+        "باتيه و عصير"
+      ],
+      "responses": [
+        "الكافيتيريا في المول فيها كل انواع السناكس اللي عايزها"
+      ]
+    },
+    {
+      "tag": "snacks_recommendation_english",
+      "patterns": [
+        "i would like to order snacks and drinks"
+      ],
+      "responses": [
+        "The mall contains a variety of snacks and cafeteria for drinks"
+      ]
+    },
+    {
+      "tag": "syrian_recommendation_arabic",
+      "patterns": [
+        "اكل سوري",
+        "سندوتش بطاطس سوري",
+        "شاورما"
+      ],
+      "responses": [
+        "جرب مطعم المول, عنده كل الاكل السوري"
+      ]
+    },
+    {
+      "tag": "syrian_recommendation_english",
+      "patterns": [
+        "I want to eat shawarma",
+        "I'm craving syrian food",
+        "which place serves the best syrian food",
+        "shawerma"
+      ],
+      "responses": [
+        "I suggest you head to the Mall, it has the best syrian food."
+      ]
+    },
+    {
+      "tag": "menu_arabic",
+      "patterns": [
+        "عايز المنيو",
+        "الاسعار ايه",
+        "بكام؟",
+        "بقت بكام",
+        "عايز منيو كل مطعم",
+        "المنيو ؟"
+      ],
+      "responses": [
+        {
+          "id": 1,
+          "category": "Meals of Witch",
+          "items": [
+            {
+              "name": "باستا صوص ابيض",
+              "price": 30
+            },
+            {
+              "name": "سندوتش بطاطس",
+              "price": 22
+            },
+            {
+              "name": "برجر",
+              "price": 10.99
+            },
+            {
+              "name": "كريب زنجر",
+              "price": 55
+            },
+            {
+              "name": "كفتة",
+              "price": 35
+            },
+            {
+              "name": "بيتزا فراح",
+              "price": 75
+            },
+            {
+              "name": "بيتزا لحمة",
+              "price": 75
+            },
+            {
+              "name": "بيتزا مارجريتا",
+              "price": 70
+            },
+            {
+              "name": "بينزا تونا",
+              "price": 85
+            },
+            {
+              "name": "بيتزا ميكس",
+              "price": 85
+            },
+            {
+              "name": "بيتزا ميكس لحمة",
+              "price": 85
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "category": "desserts of Witch",
+          "items": [
+            {
+              "name": "مولتن كيك",
+              "price": 45
+            },
+            {
+              "name": "تشيز كيك",
+              "price": 40
+            },
+            {
+              "name": "كاب كيك",
+              "price": 30
+            },
+            {
+              "name": "فطيرة شكولاتة",
+              "price": 35
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "category": "drinks of Witch",
+          "items": [
+            {
+              "name": "ايسد كوفي",
+              "price": 10
+            },
+            {
+              "name": "سموزي",
+              "price": 30
+            },
+            {
+              "name": "شاي",
+              "price": 10
+            },
+            {
+              "name": "قهوة",
+              "price": 10
+            },
+            {
+              "name": "بيبسي",
+              "price": 5
+            },
+            {
+              "name": "نسكافيه",
+              "price": 15
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "category": "Meals of Marwa",
+          "items": [
+            {
+              "name": "باستا صوص ابيض",
+              "price": 30
+            },
+            {
+              "name": "سندوتش بطاطس",
+              "price": 22
+            },
+            {
+              "name": "برجر",
+              "price": 10.99
+            },
+            {
+              "name": "كريب زنجر",
+              "price": 55
+            },
+            {
+              "name": "كفتة",
+              "price": 35
+            },
+            {
+              "name": "بيتزا فراح",
+              "price": 75
+            },
+            {
+              "name": "بيتزا لحمة",
+              "price": 75
+            },
+            {
+              "name": "بيتزا مارجريتا",
+              "price": 70
+            },
+            {
+              "name": "بينزا تونا",
+              "price": 85
+            },
+            {
+              "name": "بيتزا ميكس",
+              "price": 85
+            },
+            {
+              "name": "بيتزا ميكس لحمة",
+              "price": 85
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "category": "desserts of Marwa",
+          "items": [
+            {
+              "name": "مولتن كيك",
+              "price": 45
+            },
+            {
+              "name": "تشيز كيك",
+              "price": 40
+            },
+            {
+              "name": "كاب كيك",
+              "price": 30
+            },
+            {
+              "name": "فطيرة شكولاتة",
+              "price": 35
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "category": "drinks of Marwa",
+          "items": [
+            {
+              "name": "ايسد كوفي",
+              "price": 10
+            },
+            {
+              "name": "سموزي",
+              "price": 30
+            },
+            {
+              "name": "شاي",
+              "price": 10
+            },
+            {
+              "name": "قهوة",
+              "price": 10
+            },
+            {
+              "name": "بيبسي",
+              "price": 5
+            },
+            {
+              "name": "نسكافيه",
+              "price": 15
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "category": "Meals of Africanno",
+          "items": [
+            {
+              "name": "باستا صوص ابيض",
+              "price": 30
+            },
+            {
+              "name": "سندوتش بطاطس",
+              "price": 22
+            },
+            {
+              "name": "برجر",
+              "price": 10.99
+            },
+            {
+              "name": "كريب زنجر",
+              "price": 55
+            },
+            {
+              "name": "كفتة",
+              "price": 35
+            },
+            {
+              "name": "بيتزا فراح",
+              "price": 75
+            },
+            {
+              "name": "بيتزا لحمة",
+              "price": 75
+            },
+            {
+              "name": "بيتزا مارجريتا",
+              "price": 70
+            },
+            {
+              "name": "بينزا تونا",
+              "price": 85
+            },
+            {
+              "name": "بيتزا ميكس",
+              "price": 85
+            },
+            {
+              "name": "بيتزا ميكس لحمة",
+              "price": 85
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "category": "desserts of Africanno",
+          "items": [
+            {
+              "name": "مولتن كيك",
+              "price": 45
+            },
+            {
+              "name": "تشيز كيك",
+              "price": 40
+            },
+            {
+              "name": "كاب كيك",
+              "price": 30
+            },
+            {
+              "name": "فطيرة شكولاتة",
+              "price": 35
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "category": "drinks of Africanno",
+          "items": [
+            {
+              "name": "ايسد كوفي",
+              "price": 10
+            },
+            {
+              "name": "سموزي",
+              "price": 30
+            },
+            {
+              "name": "شاي",
+              "price": 10
+            },
+            {
+              "name": "قهوة",
+              "price": 10
+            },
+            {
+              "name": "بيبسي",
+              "price": 5
+            },
+            {
+              "name": "نسكافيه",
+              "price": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "menu_english",
+      "patterns": [
+        "what's on the menu?",
+        "How much does it cost?",
+        "What are the prices now?",
+        "Can I view the menu?",
+        "What is the menu of each restaurant?",
+        "What dishes are available at 'Witch' restaurant?",
+        "I'd like to know the menu offerings at 'witch' Can you provide that information?"
+      ],
+      "responses": [
+        {
+          "id": 1,
+          "category": "Meals of Witch",
+          "items": [
+            {
+              "name": "white sauce pasta",
+              "price": 30
+            },
+            {
+              "name": "fried potatoes sandwich",
+              "price": 22
+            },
+            {
+              "name": "burger",
+              "price": 10.99
+            },
+            {
+              "name": "zenger creb",
+              "price": 55
+            },
+            {
+              "name": "kofta",
+              "price": 35
+            },
+            {
+              "name": "chicken pizza",
+              "price": 75
+            },
+            {
+              "name": "beef pizza",
+              "price": 75
+            },
+            {
+              "name": "margherita pizza",
+              "price": 70
+            },
+            {
+              "name": "tuna pizza",
+              "price": 85
+            },
+            {
+              "name": "pizza mix chicken",
+              "price": 85
+            },
+            {
+              "name": "pizza mix beef",
+              "price": 85
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "category": "desserts of Witch",
+          "items": [
+            {
+              "name": "Chocolate Lava Cake",
+              "price": 45
+            },
+            {
+              "name": "Cheesecake",
+              "price": 40
+            },
+            {
+              "name": "cupcake",
+              "price": 30
+            },
+            {
+              "name": "chocolate pizza",
+              "price": 35
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "category": "drinks of Witch",
+          "items": [
+            {
+              "name": "Iced Coffee",
+              "price": 10
+            },
+            {
+              "name": "any Fruit Smoothie",
+              "price": 30
+            },
+            {
+              "name": "tea",
+              "price": 10
+            },
+            {
+              "name": "coffee",
+              "price": 10
+            },
+            {
+              "name": "cola",
+              "price": 5
+            },
+            {
+              "name": "latte",
+              "price": 15
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "category": "Meals of Marwa",
+          "items": [
+            {
+              "name": "white sauce pasta",
+              "price": 30
+            },
+            {
+              "name": "fried potatoes sandwich",
+              "price": 22
+            },
+            {
+              "name": "burger",
+              "price": 10.99
+            },
+            {
+              "name": "zenger creb",
+              "price": 55
+            },
+            {
+              "name": "kofta",
+              "price": 35
+            },
+            {
+              "name": "chicken pizza",
+              "price": 75
+            },
+            {
+              "name": "beef pizza",
+              "price": 75
+            },
+            {
+              "name": "margherita pizza",
+              "price": 70
+            },
+            {
+              "name": "tuna pizza",
+              "price": 85
+            },
+            {
+              "name": "pizza mix chicken",
+              "price": 85
+            },
+            {
+              "name": "pizza mix beef",
+              "price": 85
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "category": "desserts of Marwa",
+          "items": [
+            {
+              "name": "Chocolate Lava Cake",
+              "price": 45
+            },
+            {
+              "name": "Cheesecake",
+              "price": 40
+            },
+            {
+              "name": "cupcake",
+              "price": 30
+            },
+            {
+              "name": "chocolate pizza",
+              "price": 35
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "category": "drinks of Marwa",
+          "items": [
+            {
+              "name": "Iced Coffee",
+              "price": 10
+            },
+            {
+              "name": "any Fruit Smoothie",
+              "price": 30
+            },
+            {
+              "name": "tea",
+              "price": 10
+            },
+            {
+              "name": "coffee",
+              "price": 10
+            },
+            {
+              "name": "cola",
+              "price": 5
+            },
+            {
+              "name": "latte",
+              "price": 15
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "category": "Meals of Africanno",
+          "items": [
+            {
+              "name": "white sauce pasta",
+              "price": 30
+            },
+            {
+              "name": "fried potatoes sandwich",
+              "price": 22
+            },
+            {
+              "name": "burger",
+              "price": 10.99
+            },
+            {
+              "name": "zenger creb",
+              "price": 55
+            },
+            {
+              "name": "kofta",
+              "price": 35
+            },
+            {
+              "name": "chicken pizza",
+              "price": 75
+            },
+            {
+              "name": "beef pizza",
+              "price": 75
+            },
+            {
+              "name": "margherita pizza",
+              "price": 70
+            },
+            {
+              "name": "tuna pizza",
+              "price": 85
+            },
+            {
+              "name": "pizza mix chicken",
+              "price": 85
+            },
+            {
+              "name": "pizza mix beef",
+              "price": 85
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "category": "desserts of Africanno",
+          "items": [
+            {
+              "name": "Chocolate Lava Cake",
+              "price": 45
+            },
+            {
+              "name": "Cheesecake",
+              "price": 40
+            },
+            {
+              "name": "cupcake",
+              "price": 30
+            },
+            {
+              "name": "chocolate pizza",
+              "price": 35
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "category": "drinks of Africanno",
+          "items": [
+            {
+              "name": "Iced Coffee",
+              "price": 10
+            },
+            {
+              "name": "any Fruit Smoothie",
+              "price": 30
+            },
+            {
+              "name": "tea",
+              "price": 10
+            },
+            {
+              "name": "coffee",
+              "price": 10
+            },
+            {
+              "name": "cola",
+              "price": 5
+            },
+            {
+              "name": "latte",
+              "price": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "el_marwa_location_arabic",
+      "patterns": [
+        "حاسبات",
+        "مبنى طب 1",
+        "مبنى طب 2",
+        "مدرج 13",
+        "مدرج 14",
+        "مدرج 17"
+      ],
+      "responses": [
+        "المروة اقرب حاجة لحاسبات و طب 1 و 2، مدرج 13 و 14."
+      ]
+    },
+    {
+      "tag": "el_marwa_location_english",
+      "patterns": [
+        "Computer Science",
+        "Medicine",
+        "Hall 13",
+        "Hall 14",
+        "Hall 17",
+        "where is el marwa located?"
+      ],
+      "responses": [
+        "El Marwa is right next to Computer Science, Medicine, Hall 13, 14, and 17."
+      ]
+    },
+    {
+      "tag": "witch_restaurant_location_arabic",
+      "patterns": [
+        "حقوق",
+        "مدرج 15",
+        "مدرج 8",
+        "مدرج 10",
+        "كلية التربية"
+      ],
+      "responses": [
+        "مطعم ويتش اقرب مكان من  مدرج 15، 8، و 10، كلية حقوق، وكلية التربية."
+      ]
+    },
+    {
+      "tag": "witch_restaurant_location_english",
+      "patterns": [
+        "faculty of education",
+        "faculty of law",
+        "Hall 8",
+        "Hall 10",
+        "Hall 15",
+        "can you tell me witch location?"
+      ],
+      "responses": [
+        "Witch is close to the faculty of Education, Law, as well as Hall 8, 10, and 15."
+      ]
+    },
+    {
+      "tag": "the_mall_location_arabic",
+      "patterns": [
+        "صيدلة",
+        "خدمة اجتماعية",
+        "مدرج 6"
+      ],
+      "responses": [
+        "المول اقرب مكان من كلية صيدلة و خدمة اجتماعية و مدرج 6."
+      ]
+    },
+    {
+      "tag": "the_mall_location_english",
+      "patterns": [
+        "faculty of Pharmacy",
+        "Social work",
+        "Hall 6",
+        "can you tell me the mall location?"
+      ],
+      "responses": [
+        "The Mall is located near the faculty of Pharmacy, Social work, and Hall 6."
+      ]
+    },
+    {
+      "tag": "africana_location_arabic",
+      "patterns": [
+        "العلوم",
+        "فصول ومعامل",
+        "مدرج 18"
+      ],
+      "responses": [
+        "أفريكانا اقرب مكان من كلية العلوم، فصول ومعامل، ومدرج 18."
+      ]
+    },
+    {
+      "tag": "africana_location_english",
+      "patterns": [
+        "faculty of Science",
+        "Classes and Labs",
+        "Hall 18"
+      ],
+      "responses": [
+        "Africana is located near the faculty of Science, Classes and Labs, and Hall 18."
+      ]
+    },
+    {
+      "tag": "thank_you_arabic",
+      "patterns": [
+        "شكرا"
+      ],
+      "responses": [
+        "العفو,  قولي لو عندك أسئلة تانية"
+      ]
+    },
+    {
+      "tag": "thank_you_english",
+      "patterns": [
+        "Thank you"
+      ],
+      "responses": [
+        "You're welcome! If you have any more questions, feel free to ask."
+      ]
+    }
+  ]
+}
