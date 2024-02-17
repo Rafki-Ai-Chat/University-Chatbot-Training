@@ -2,6 +2,8 @@ import pandas as pd
 import nltk
 import numpy as np
 import re  #regular expressions
+from langdetect import detect ,detect_langs
+# from charset_normalizer import detect
 from nltk.stem import wordnet  # for lemmatization
 from sklearn.feature_extraction.text import CountVectorizer  # for bag of words (bow)
 from sklearn.feature_extraction.text import TfidfVectorizer  #for tfidf
@@ -34,6 +36,10 @@ def format_menu(menu):
     return formatted_menu.strip()
 
 df.loc[14:15, 'responses'] = df.loc[14:15, 'responses'].apply(format_menu)
+
+def detect_language(text):
+        language = detect(text)
+        return language
 
 # print(df['responses'][14])
 # print(df['responses'][15])
@@ -83,7 +89,8 @@ def text_normalization(text):
 normalized = df['patterns'].apply(text_normalization) #calling the function
 df.insert(2, 'Normalized patterns', normalized, True)
 
-stop = stopwords.words('english')
+lang = 'english'
+stop = stopwords.words(lang)
 def removeStopWords(text):
     Q = []
     s = text.split()  # create an array of words from our text sentence, cut it into words
@@ -118,9 +125,13 @@ def chat_bow(question):
 x=True
 while x:
     user_input = input("user: ")
+    if detect_language(user_input) in ['ar' , 'fa']:
+        lang= "arabic"
     if user_input.lower() == 'exit':
         x=False
     else:
         y=chat_bow(user_input)
         print("chatbot: ",y)
 
+# x=detect_language("اليل")
+# print(x)
